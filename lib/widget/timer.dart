@@ -10,7 +10,7 @@ class MyTimer extends StatefulWidget {
 class _MyTimer extends State<MyTimer> {
   int _duration = 0;
   final CountDownController _controller = CountDownController();
-  Map<String, List<int>> dateDurationMap = {};
+  Map<String, List<int>> dateDurationMap = {};    // 날짜: [시간1,시간2,...] 형식으로 데이터 저장
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class _MyTimer extends State<MyTimer> {
             Stack(
               children: [
                 Positioned.fill(
-                  child: Image.asset("asset/img/timer/bottom3.png"), // 이미지 파일 경로를 여기에 추가하세요.
+                  child: Image.asset("asset/img/timer/bottom3.png"),
                 ),
                 CircularCountDownTimer(
                   width: MediaQuery.of(context).size.width,
